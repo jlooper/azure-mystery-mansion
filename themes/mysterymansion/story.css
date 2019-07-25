@@ -62,15 +62,14 @@ p {
 	top: 0;
 	left: 0;
 	border-bottom: 2px solid rgba(25, 162, 200, 0.5);
-	padding-left: 40%;
 	padding-top: 30px;
 	font-family: 'VT323', 'Courier New', monospace;
 	font-size: 34px;
 	font-weight: bold;
 	text-shadow: 0 0 10px #12b6df;
 	background: rgba(5, 52, 64, 0.3);
+	text-align: center;
 	width: 100%;
-	text-align: left;
 	height: 60px;
 }
 
