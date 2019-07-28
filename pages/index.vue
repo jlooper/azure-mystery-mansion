@@ -9,29 +9,30 @@
         <p class="text-title">Inventory</p>
       </div>
       <div class="terminal">
-        <p class="text-title">Please Come In</p>
-        <p>Hello!</p>
-        <p>Where do you want to go?</p>
+        <Outside />
       </div>
       <div class="footer">
-        <a id="undoHost" href="#">Undo</a>
-        <a id="saveHost" href="#">Save</a>
-        <a id="restoreHost" href="#">Restore</a>
-        <a id="resetHost" href="#">Reset</a>
+        <a id="undoHost" class="footer-links" href="#">Undo</a>
+        <a id="saveHost" class="footer-links" href="#">Save</a>
+        <a id="restoreHost" class="footer-links" href="#">Restore</a>
+        <a id="resetHost" class="footer-links" href="#">Reset</a>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Outside from '~/components/Outside.vue'
+
 export default {
-  components: {}
+  components: {
+    Outside
+  }
 }
 </script>
 
 <style>
 body {
-  background: url(~assets/mansion.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -44,9 +45,11 @@ body {
   height: 100%;
   overflow: hidden;
 }
-a {
+a,
+.command {
   color: #aff5c1;
   text-decoration: none;
+  text-shadow: 0 0 5px #1ff05f;
 }
 p {
   margin: 15px;
@@ -101,20 +104,25 @@ p {
 .terminal {
   font-size: 18px;
   width: 500px;
-  height: 200px;
+  height: 300px;
   margin: 5px;
   background: rgba(4, 39, 48, 0.8);
   grid-area: 1 / 2 / 2 / 3;
+  overflow-y: auto;
 }
 .footer {
   margin: 5px;
+  padding: 10px;
   text-align: center;
   background: rgba(4, 39, 48, 0.8);
   grid-area: 2 / 1 / 3 / 3;
   font-size: 15px;
-  padding-left: 10px;
   height: 40px;
   font-family: 'VT323', 'Courier New', monospace;
   text-shadow: 0 0 5px #1ff05f;
+}
+.footer-links {
+  padding: 10px;
+  font-weight: bold;
 }
 </style>
