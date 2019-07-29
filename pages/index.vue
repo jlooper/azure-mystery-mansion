@@ -7,6 +7,7 @@
     <div class="parent">
       <div class="inventory">
         <p class="text-title">Inventory</p>
+        <p v-for="item in inventory" :key="item">{{ item }}</p>
       </div>
       <div class="terminal">
         <Outside />
@@ -27,6 +28,11 @@ import Outside from '~/components/Outside.vue'
 export default {
   components: {
     Outside
+  },
+  data() {
+    return {
+      inventory: []
+    }
   }
 }
 </script>
@@ -50,6 +56,7 @@ a,
   color: #aff5c1;
   text-decoration: none;
   text-shadow: 0 0 5px #1ff05f;
+  cursor: pointer;
 }
 p {
   margin: 15px;
@@ -94,6 +101,11 @@ p {
   grid-row-gap: 0px;
 }
 
+.popup {
+  display: block;
+  left: 780.312px;
+  top: 271px;
+}
 .inventory {
   font-size: 18px;
   width: 200px;
@@ -124,5 +136,28 @@ p {
 .footer-links {
   padding: 10px;
   font-weight: bold;
+}
+
+.tooltip {
+  z-index: 10000;
+  overflow: auto;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #15ccfa;
+  background-color: #000;
+  -webkit-box-shadow: 0 0 15px #ffffff;
+  -moz-box-shadow: 0 0 15px #ffffff;
+  box-shadow: 0 0 15px #ffffff;
+}
+
+.tooltip[aria-hidden='true'] {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.15s, visibility 0.15s;
+}
+.tooltip[aria-hidden='false'] {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.15s;
 }
 </style>
