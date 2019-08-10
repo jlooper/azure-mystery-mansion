@@ -29,9 +29,9 @@ export default {
   components: {
     Outside
   },
-  data() {
-    return {
-      inventory: []
+  computed: {
+    inventory() {
+      return this.$store.state.inventory
     }
   }
 }

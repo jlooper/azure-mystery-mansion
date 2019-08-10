@@ -15,7 +15,9 @@
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/pwa": "^2.6.0",
     "nuxt": "^2.0.0",
-    "v-tooltip": "^2.0.2"
+    "playfab-sdk": "^2.31.190717",
+    "v-tooltip": "^2.0.2",
+    "vuex": "^3.1.1"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^1.0.1",

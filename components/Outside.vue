@@ -11,23 +11,16 @@
       <span class="command" @click="prompt()">Explore the car</span>
     </p>
     <p>
-      <span class="command" @click="prompt('showKey', '🔑 to the front door')"
+      <span class="command" @click="prompt('showObj', '🔑 to the front door')"
         >Walk up the front steps.</span
       >
     </p>
 
-    <!--<v-popover>
-      <span>key</span>
-      <template slot="popover">
-        <span @click="addToInventory('🔑')">{{ msg }}</span>
-      </template>
-    </v-popover>-->
-
-    <p v-if="showKey">
-      There appears to be a
-      <span v-tooltip.right="msg">🔑</span> under the doormat.
-    </p>
-    <p v-for="command in commands" :key="command">{{ command }}</p>
+    <span v-if="showObj">
+      <p>There appears to be a 🔑 under the doormat.</p>
+      <p class="command" @click="add('🔑')">Collect</p>
+      <p class="command">Ignore</p>
+    </span>
   </div>
 </template>
 
@@ -35,23 +28,25 @@
 export default {
   data() {
     return {
-      commands: [],
-      instructions: [],
-      inventory: [],
       msg: 'Get',
-      showKey: ''
+      showObj: ''
+    }
+  },
+  computed: {
+    inventory() {
+      return this.$store.state.inventory
     }
   },
   methods: {
+    add(item) {
+      this.$store.commit('add', item)
+    },
     prompt(item, object) {
       if (!object) {
         this.commands.push("There's nothing interesting here.")
       } else {
-        this.showKey = true
+        this.showObj = true
       }
-    },
-    addToInventory(obj) {
-      this.inventory.push(obj)
     }
   }
 }
