@@ -1,5 +1,6 @@
 export const state = () => ({
-  inventory: []
+  inventory: [],
+  backgroundPath: ''
 })
 
 export const mutations = {
@@ -7,5 +8,8 @@ export const mutations = {
     if (!state.inventory.includes(payload)) {
       state.inventory.push(payload)
     }
+  },
+  getBackground(state, payload) {
+    state.backgroundPath = payload
   }
 }

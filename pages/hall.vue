@@ -9,10 +9,7 @@
   </div>
 </template>
 <script>
-export default {}
-</script>
-<style>
-body {
-  background: url(~assets/hall.jpg) no-repeat cover;
+export default {
+  layout: 'hall'
 }
-</style>
+</script>

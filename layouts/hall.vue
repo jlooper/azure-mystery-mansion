@@ -25,14 +25,11 @@ export default {
 }
 </script>
 
-<style>
-body {
-  background-color: black;
-}
+<style scoped>
 .wrapper {
   width: 100%;
   height: 100%;
-  background-image: url('~assets/mansion.jpg');
+  background-image: url('~assets/hall.jpg');
   background-size: cover;
   background-attachment: fixed;
   font-family: 'VT323', 'Courier New', monospace;

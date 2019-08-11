@@ -58,10 +58,16 @@ export default {
     }
   },
   computed: {
-    inventory() {
-      return this.$store.state.inventory
+    backgroundPath() {
+      return this.$store.state.backgroundPath
     }
   },
+
+  created() {
+    /* :style="'background-image:url(' + backgroundPath + ')'" */
+    this.$store.commit('getBackground', 'mansion.jpg')
+  },
+
   methods: {
     add(item) {
       this.$store.commit('add', item)
@@ -69,8 +75,3 @@ export default {
   }
 }
 </script>
-<style>
-body {
-  background: url(~assets/mansion.jpg) no-repeat center center fixed;
-}
-</style>
