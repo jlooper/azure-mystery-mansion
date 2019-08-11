@@ -10,7 +10,7 @@
         <p v-for="item in inventory" :key="item">{{ item }}</p>
       </div>
       <div class="terminal">
-        <Outside />
+        <outside />
       </div>
       <div class="footer">
         <a id="undoHost" class="footer-links" href="#">Undo</a>
@@ -23,11 +23,11 @@
 </template>
 
 <script>
-import Outside from '~/components/Outside.vue'
+import outside from '~/pages/outside.vue'
 
 export default {
   components: {
-    Outside
+    outside
   },
   computed: {
     inventory() {

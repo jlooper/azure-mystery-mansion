@@ -4,6 +4,8 @@ export const state = () => ({
 
 export const mutations = {
   add(state, payload) {
-    state.inventory.push(payload)
+    if (!state.inventory.includes(payload)) {
+      state.inventory.push(payload)
+    }
   }
 }
