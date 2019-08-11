@@ -1,13 +1,13 @@
 <template>
-  <Outside />
+  <outside />
 </template>
 
 <script>
-import Outside from '~/pages/Outside.vue'
+import outside from '~/pages/outside.vue'
 
 export default {
   components: {
-    Outside
+    outside
   }
 }
 </script>
