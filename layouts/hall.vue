@@ -26,8 +26,9 @@ export default {
 </script>
 
 <style scoped>
-#__layout {
-  height: 100%;
+html, body, #__nuxt, #__layout {
+  height: 100%
+  margin: 0px;
 }
 .wrapper {
   width: 100%;

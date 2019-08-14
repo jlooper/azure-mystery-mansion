@@ -26,8 +26,9 @@ export default {
 </script>
 
 <style>
-#__layout {
+html, body, #__nuxt, #__layout {
   height: 100%
+  margin: 0px;
 }
 body {
   background-color: black;
