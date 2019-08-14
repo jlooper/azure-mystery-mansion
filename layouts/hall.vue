@@ -26,6 +26,9 @@ export default {
 </script>
 
 <style scoped>
+#__layout {
+  height: 100%;
+}
 .wrapper {
   width: 100%;
   height: 100%;

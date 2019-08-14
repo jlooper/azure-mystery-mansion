@@ -26,6 +26,9 @@ export default {
 </script>
 
 <style>
+#__layout {
+  height: 100%
+}
 body {
   background-color: black;
 }
